@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacob1K — Videographer &amp; Creative Director</title>
+<meta name="description" content="Jacob1K — professional videographer and creative director based in Hattiesburg, MS. Music videos, commercials, and events with clean, cinematic storytelling.">
+<link rel="icon" href="assets/img/jacob-cutout.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════ LOADER ══════════ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-word" aria-hidden="true">
+      <span>J</span><span>A</span><span>C</span><span>O</span><span>B</span><span class="em">1</span><span class="em">K</span>
+    </div>
+    <div class="loader-meta">
+      <span class="mono">LOADING REEL</span>
+      <span class="mono" id="loader-pct">0%</span>
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill" id="loader-bar"></div></div>
+  </div>
+</div>
+
+<!-- ══════════ GRAIN ══════════ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" data-scrollto>JACOB<span class="em">1K</span></a>
+  <nav class="nav-links">
+    <a href="#pillars" data-scrollto class="mono">SERVICES</a>
+    <a href="#work" data-scrollto class="mono">WORK</a>
+    <a href="#book" class="nav-cta" data-contact-open>Book a Shoot</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ ACT I · HERO ORBIT (scroll-scrubbed frame sequence) ══════════ -->
+  <section class="hero-scrub" id="hero-scrub">
+    <div class="pin">
+      <canvas id="orbit-canvas"></canvas>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="hero-hud" aria-hidden="true">
+        <div class="hud-tl mono">JACOB1K — PORTFOLIO<br>HATTIESBURG, MS</div>
+        <div class="hud-tr mono">EST. 2026<br>DIR. OF PHOTOGRAPHY</div>
+        <div class="hud-bl mono"><span class="rec-dot"></span>REC <span id="hud-frame">FR 000/000</span></div>
+        <div class="hud-br mono">SONY A7 · 4K24<br>ISO 800 · T1.8</div>
+      </div>
+
+      <div class="hero-title" id="hero-title">
+        <h1 class="hero-name" aria-label="Jacob1K">
+          <span class="ltr">J</span><span class="ltr">A</span><span class="ltr">C</span><span class="ltr">O</span><span class="ltr">B</span><span class="ltr em">1</span><span class="ltr em">K</span>
+        </h1>
+        <p class="hero-sub" id="hero-sub">Videographer <span class="em">&amp;</span> Creative Director</p>
+      </div>
+
+      <div class="hero-scrollcue mono" id="hero-scrollcue">
+        <span>SCROLL TO ORBIT</span>
+        <span class="scrollcue-line"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ACT II · MANIFESTO (real about copy) ══════════ -->
+  <section class="manifesto" id="about">
+    <p class="kicker mono reveal">001 — ABOUT</p>
+    <h2 class="manifesto-line">
+      <span class="mline reveal">I MAKE EVERY</span>
+      <span class="mline reveal">CLIENT LOOK</span>
+      <span class="mline reveal">LIKE A <span class="em">STAR.</span></span>
+    </h2>
+    <div class="manifesto-copy">
+      <p class="reveal">Hi, I’m Jacob — a professional videographer focused on creating high‑quality visuals that make every client look like a star. My goal is simple: to elevate people, events, and moments through clean, cinematic storytelling that feels both authentic and impactful.</p>
+      <p class="reveal">I specialize in turning real‑life events into polished, engaging visuals that highlight energy, emotion, and detail. From planning and filming to editing and delivery, I prioritize clear communication and a smooth experience for every client.</p>
+      <p class="reveal">Based in Mississippi — open to travel wherever your vision takes us.</p>
+    </div>
+  </section>
+
+  <!-- tools marquee (real) -->
+  <div class="marquee tools-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Adobe Premiere</span><i>·</i><span>CapCut</span><i>·</i><span>HeyGen</span><i>·</i><span>Claude Code</span><i>·</i><span>Nano Banana</span><i>·</i><span>Kling</span><i>·</i><span>VEO 3.1</span><i>·</i>
+      <span>Adobe Premiere</span><i>·</i><span>CapCut</span><i>·</i><span>HeyGen</span><i>·</i><span>Claude Code</span><i>·</i><span>Nano Banana</span><i>·</i><span>Kling</span><i>·</i><span>VEO 3.1</span><i>·</i>
+    </div>
+  </div>
+
+  <!-- ══════════ ACT III · THREE PILLARS (over clip 2) ══════════ -->
+  <section class="pillars" id="pillars">
+    <div class="pin">
+      <video class="bg-video" id="pillars-video" src="assets/video/visionary.mp4" muted loop playsinline preload="metadata"></video>
+      <div class="bg-shade" aria-hidden="true"></div>
+
+      <div class="pillars-head">
+        <p class="kicker mono">002 — WHAT I SHOOT</p>
+        <div class="pillars-progress"><div class="pillars-progress-fill" id="pillars-progress"></div></div>
+      </div>
+
+      <div class="pillar" data-pillar="0">
+        <span class="pillar-index mono">01/03</span>
+        <h3 class="pillar-title">MUSIC<br><span class="em">VIDEOS</span></h3>
+        <p class="pillar-copy">Creative, industry‑standard music video production and editing to bring your artistic vision to life.</p>
+      </div>
+      <div class="pillar" data-pillar="1">
+        <span class="pillar-index mono">02/03</span>
+        <h3 class="pillar-title"><span class="em">COMMERCIALS</span></h3>
+        <p class="pillar-copy">High‑quality, dynamic brand films and short‑form, high‑retention cuts — built to engage your audience and tell your story.</p>
+      </div>
+      <div class="pillar" data-pillar="2">
+        <span class="pillar-index mono">03/03</span>
+        <h3 class="pillar-title"><span class="em">EVENTS</span></h3>
+        <p class="pillar-copy">Real‑life events turned into polished, engaging visuals that highlight energy, emotion, and detail.</p>
+      </div>
+
+      <p class="pillars-foot mono">ALSO: VIDEO EDITING · SOCIAL MEDIA CONTENT · PODCAST EDITING</p>
+    </div>
+  </section>
+
+  <!-- ══════════ ACT IV · WORK (over clip 3) ══════════ -->
+  <section class="work" id="work">
+    <video class="bg-video work-bg" id="work-video" src="assets/video/reveal.mp4" muted loop playsinline preload="metadata"></video>
+    <div class="bg-shade work-shade" aria-hidden="true"></div>
+
+    <div class="work-inner">
+      <p class="kicker mono reveal">003 — SELECTED WORK</p>
+      <h2 class="work-title reveal">THE <span class="em">REEL</span></h2>
+
+      <div class="work-grid">
+        <a class="work-card reveal" href="https://youtu.be/q92hPQwia3c" data-video="q92hPQwia3c">
+          <div class="work-thumb"><img src="assets/img/work-tintin.jpg" alt="TINTIN — Been One ft BiGG2XX music video still" loading="lazy"></div>
+          <div class="work-meta">
+            <span class="work-tag mono">MUSIC VIDEO</span>
+            <h3>TINTIN — “Been One” <span class="ft">ft&nbsp;BiGG2XX</span></h3>
+            <p>Cinematic hip‑hop music video.</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="work-card reveal" href="https://youtu.be/BPNn8ZsB1EM" data-video="BPNn8ZsB1EM">
+          <div class="work-thumb"><img src="assets/img/work-freetwin.jpg" alt="Kutthroat Jay — Free Twin music video still" loading="lazy"></div>
+          <div class="work-meta">
+            <span class="work-tag mono">MUSIC VIDEO</span>
+            <h3>Kutthroat Jay — “Free Twin”</h3>
+            <p>Gritty street‑narrative music video.</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="work-card reveal" href="https://youtu.be/knHWet8ylNs" data-video="knHWet8ylNs">
+          <div class="work-thumb"><img src="assets/img/work-googlereview.jpg" alt="Automate Your Google Review commercial still" loading="lazy"></div>
+          <div class="work-meta">
+            <span class="work-tag mono">COMMERCIAL</span>
+            <h3>Automate Your Google Review</h3>
+            <p>Commercial promo spot.</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TESTIMONIALS (real) ══════════ -->
+  <section class="testimonials">
+    <p class="kicker mono reveal">004 — WORD ON THE STREET</p>
+    <div class="marquee quotes-marquee">
+      <div class="marquee-track">
+        <blockquote>“Jacob gets me right every time! Best in the sip!” <cite>— Tyron</cite></blockquote><i>✦</i>
+        <blockquote>“Creative and easy to work with. Highly recommend!” <cite>— Isaiah</cite></blockquote><i>✦</i>
+        <blockquote>“The video came out amazing, nothing but great feedback!” <cite>— Eli</cite></blockquote><i>✦</i>
+        <blockquote>“If Jacob didn’t shoot it’s not shot right!” <cite>— Dave</cite></blockquote><i>✦</i>
+        <blockquote>“Jacob gets me right every time! Best in the sip!” <cite>— Tyron</cite></blockquote><i>✦</i>
+        <blockquote>“Creative and easy to work with. Highly recommend!” <cite>— Isaiah</cite></blockquote><i>✦</i>
+        <blockquote>“The video came out amazing, nothing but great feedback!” <cite>— Eli</cite></blockquote><i>✦</i>
+        <blockquote>“If Jacob didn’t shoot it’s not shot right!” <cite>— Dave</cite></blockquote><i>✦</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ (real) ══════════ -->
+  <section class="faq" id="faq">
+    <p class="kicker mono reveal">005 — FAQ</p>
+    <h2 class="faq-title reveal">BEFORE YOU <span class="em">BOOK</span></h2>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary><span class="mono">001.</span> How much do you charge? <span class="faq-x" aria-hidden="true">+</span></summary>
+        <p>Pricing varies depending on the scope of your project — shoot length, location, and deliverables all play a role. Reach out for a custom quote and I’ll get back to you within 24 hours.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="mono">002.</span> Do you travel? <span class="faq-x" aria-hidden="true">+</span></summary>
+        <p>Absolutely! I’m available for travel both locally and out of state. Travel fees apply for locations outside of Hattiesburg, MS and will be included in your project quote upfront. No surprises.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="mono">003.</span> How can I book? <span class="faq-x" aria-hidden="true">+</span></summary>
+        <p>Booking is easy! Submit a booking request on my website, email me at Jacob@jacob1k.com, or send a DM on Instagram, TikTok, or Facebook. I recommend reaching out at least 1 week in advance to lock in your date.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="mono">004.</span> How long until I get the final video? <span class="faq-x" aria-hidden="true">+</span></summary>
+        <p>Turnaround time is typically 1–2 weeks from your shoot date. Rush delivery may be available depending on my current schedule — just ask!</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="mono">005.</span> Do you require a deposit? <span class="faq-x" aria-hidden="true">+</span></summary>
+        <p>Yes — a deposit is required to officially secure your booking. This ensures your date is held exclusively for you. The remaining balance is due on the shoot day.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary><span class="mono">006.</span> How do I officially secure my booking? <span class="faq-x" aria-hidden="true">+</span></summary>
+        <p>A deposit must be paid to secure your booking. I accept Cash App, Apple Pay, and cash. Once the deposit is received, your date is held exclusively for you.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ══════════ FINALE · BOOK ══════════ -->
+  <section class="finale" id="book">
+    <p class="kicker mono reveal">006 — THE CALL SHEET</p>
+    <h2 class="finale-title">
+      <span class="mline reveal">BOOK A</span>
+      <span class="mline reveal em">VIDEO</span>
+      <span class="mline reveal">SHOOT<span class="em">.</span></span>
+    </h2>
+    <p class="finale-copy reveal">Ready to turn your idea into a standout visual experience? Send a message and I’ll reply within one business day.</p>
+    <div class="finale-cta reveal">
+      <a class="btn btn-solid" href="mailto:Jacob@jacob1k.com?subject=Video%20Shoot%20Booking" data-contact-open>Get in touch</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="footer-logo">JACOB<span class="em">1K</span></span>
+      <p>Transforming creative visions into cinematic visual experiences that captivate audiences, elevate brands, and turn moments into powerful stories through high‑quality videography and storytelling.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <span class="mono footer-h">SOCIALS</span>
+        <a href="https://www.instagram.com/jacob1k.__/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@jacob1k" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://facebook.com/jacob1k" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <div class="footer-col">
+        <span class="mono footer-h">SITE</span>
+        <a href="#top" data-scrollto>Home</a>
+        <a href="#pillars" data-scrollto>Services</a>
+        <a href="#work" data-scrollto>Work</a>
+        <a href="#book" data-scrollto>Book</a>
+      </div>
+      <div class="footer-col">
+        <span class="mono footer-h">MORE</span>
+        <a href="https://jacob1k.vercel.app/articles" target="_blank" rel="noopener">Articles</a>
+        <a href="https://jacob1k.vercel.app/privacy" target="_blank" rel="noopener">Privacy</a>
+        <a href="https://jacob1k.vercel.app/terms" target="_blank" rel="noopener">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="mono">© 2026 JACOB1K. ALL RIGHTS RESERVED.</span>
+    <span class="mono"><a class="footer-credit" href="https://www.chatbotboy.ai/" target="_blank" rel="noopener">Created by Chatbot Boy AI</a></span>
+    <span class="mono">HATTIESBURG, MS — WORLDWIDE</span>
+  </div>
+</footer>
+
+<!-- ══════════ CONTACT MODAL ══════════ -->
+<div class="contact-modal" id="contact-modal" aria-hidden="true" role="dialog" aria-label="Contact form">
+  <div class="lightbox-backdrop" data-contact-close></div>
+  <div class="contact-stage">
+    <div class="contact-card">
+      <button class="contact-close mono" data-contact-close aria-label="Close form">✕</button>
+      <p class="kicker mono">BOOK A SHOOT</p>
+      <h3 class="contact-title">GET IN <span class="em">TOUCH</span></h3>
+      <p class="contact-copy">Ready to turn your idea into a standout visual experience? Send a message and I’ll reply within one business day.</p>
+      <form id="contact-form" novalidate>
+        <label class="field">
+          <span class="mono">NAME*</span>
+          <input type="text" name="name" required autocomplete="name" placeholder="Your name">
+        </label>
+        <label class="field">
+          <span class="mono">EMAIL*</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@email.com">
+        </label>
+        <label class="field">
+          <span class="mono">MESSAGE*</span>
+          <textarea name="message" rows="4" required placeholder="Tell me about your shoot — date, location, vision…"></textarea>
+        </label>
+        <button type="submit" class="btn btn-solid contact-send">Send message</button>
+        <p class="contact-note mono" id="contact-note">SENDS VIA YOUR EMAIL APP TO JACOB@JACOB1K.COM</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Video player">
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-stage">
+    <button class="lightbox-close mono" data-lightbox-close aria-label="Close video">CLOSE ✕</button>
+    <div class="lightbox-frame" id="lightbox-frame"></div>
+  </div>
+</div>
+
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
