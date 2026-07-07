@@ -230,18 +230,45 @@
     if (ev.key === "Escape" && contactModal.classList.contains("open")) closeContact();
   });
 
-  contactForm.addEventListener("submit", (ev) => {
+  contactForm.addEventListener("submit", async (ev) => {
     ev.preventDefault();
-    const { name, email, message } = contactForm.elements;
-    const subject = encodeURIComponent(`Video Shoot Booking — ${name.value}`);
-    const body = encodeURIComponent(`${message.value}\n\n— ${name.value} (${email.value})`);
-    window.location.href = `mailto:Jacob@jacob1k.com?subject=${subject}&body=${body}`;
-    contactNote.textContent = "OPENING YOUR EMAIL APP…";
-    setTimeout(() => {
-      contactNote.textContent = CONTACT_NOTE_DEFAULT;
-      closeContact();
-      contactForm.reset();
-    }, 1400);
+    const sendBtn = contactForm.querySelector(".contact-send");
+    const { name, email, message, company } = contactForm.elements;
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Sending…";
+    contactNote.classList.remove("contact-note-error");
+    contactNote.textContent = "SENDING YOUR MESSAGE…";
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.value,
+          email: email.value,
+          message: message.value,
+          company: company.value, // honeypot — always empty for real visitors
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) throw new Error(data.error || "");
+
+      contactNote.textContent = "MESSAGE SENT — I’LL REPLY WITHIN ONE BUSINESS DAY";
+      setTimeout(() => {
+        closeContact();
+        contactForm.reset();
+        contactNote.classList.remove("contact-note-error");
+        contactNote.textContent = CONTACT_NOTE_DEFAULT;
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send message";
+      }, 1800);
+    } catch (err) {
+      contactNote.classList.add("contact-note-error");
+      contactNote.textContent = err.message || "SOMETHING WENT WRONG — EMAIL JACOB@JACOB1K.COM DIRECTLY";
+      sendBtn.disabled = false;
+      sendBtn.textContent = "Send message";
+    }
   });
 
   /* ── reveals ────────────────────────────── */

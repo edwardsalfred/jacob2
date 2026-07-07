@@ -551,7 +551,15 @@ img, video { max-width: 100%; display: block; }
   border-color: rgba(220, 90, 90, 0.5);
 }
 .contact-send { border: none; cursor: pointer; margin-top: 0.3rem; width: 100%; }
-.contact-note { color: var(--cream-faint); text-align: center; }
+.contact-send:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+.contact-note { color: var(--cream-faint); text-align: center; transition: color 0.25s; }
+.contact-note.contact-note-error { color: #ff9d8a; }
+.field-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+}
 
 /* ── reveals ───────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(2.4rem); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -573,6 +581,16 @@ img, video { max-width: 100%; display: block; }
   .footer-cols { grid-template-columns: repeat(2, 1fr); }
   .pillar[data-pillar="1"] { align-items: flex-start; text-align: left; }
   .faq-item p { padding-left: 0; }
+
+  /* long unbreakable words (COMMERCIALS) clip against .pin's overflow:hidden
+     if sized by the desktop clamp's 4rem floor on narrow phones */
+  .pillar-title { font-size: clamp(2.2rem, 13vw, 4rem); }
+
+  /* comfortable touch targets */
+  .nav-cta { padding: 0.8rem 1.2rem; }
+  .contact-close { width: 2.6rem; height: 2.6rem; }
+  .lightbox-close { padding: 0.7rem 0; }
+  .faq-item summary { padding: 1.3rem 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

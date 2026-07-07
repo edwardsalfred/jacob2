@@ -1,3 +1,7 @@
 .playwright-mcp/
 .DS_Store
 Thumbs.db
+.env
+.env.local
+.vercel
+node_modules/
