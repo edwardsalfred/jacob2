@@ -254,7 +254,7 @@
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error(data.error || "");
 
-      contactNote.textContent = "MESSAGE SENT — I’LL REPLY WITHIN ONE BUSINESS DAY";
+      contactNote.textContent = "MESSAGE SENT · I’LL REPLY WITHIN ONE BUSINESS DAY";
       setTimeout(() => {
         closeContact();
         contactForm.reset();
@@ -265,7 +265,7 @@
       }, 1800);
     } catch (err) {
       contactNote.classList.add("contact-note-error");
-      contactNote.textContent = err.message || "SOMETHING WENT WRONG — EMAIL JACOB@JACOB1K.COM DIRECTLY";
+      contactNote.textContent = err.message || "SOMETHING WENT WRONG · EMAIL JACOB@JACOB1K.COM DIRECTLY";
       sendBtn.disabled = false;
       sendBtn.textContent = "Send message";
     }
