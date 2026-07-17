@@ -554,6 +554,23 @@ img, video { max-width: 100%; display: block; }
 .contact-send:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
 .contact-note { color: var(--cream-faint); text-align: center; transition: color 0.25s; }
 .contact-note.contact-note-error { color: #ff9d8a; }
+.contact-success { display: grid; gap: 1rem; justify-items: start; animation: contactSuccessIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.contact-success[hidden] { display: none; }
+.contact-success-mark {
+  width: 3.2rem; height: 3.2rem;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(22, 245, 132, 0.12);
+  border: 1px solid var(--em);
+  color: var(--em);
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+.contact-success-close { border: none; cursor: pointer; margin-top: 0.4rem; }
+@keyframes contactSuccessIn {
+  from { opacity: 0; transform: translateY(0.6rem); }
+  to { opacity: 1; transform: none; }
+}
 .field-honeypot {
   position: absolute !important;
   left: -9999px !important;

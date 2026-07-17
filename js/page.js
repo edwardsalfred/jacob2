@@ -35,18 +35,35 @@
   const contactModal = document.getElementById("contact-modal");
   const contactForm = document.getElementById("contact-form");
   const contactNote = document.getElementById("contact-note");
+  const contactSuccess = document.getElementById("contact-success");
   const CONTACT_NOTE_DEFAULT = contactNote.textContent;
+
+  const resetContactView = () => {
+    contactForm.hidden = false;
+    contactSuccess.hidden = true;
+    contactForm.reset();
+    contactNote.classList.remove("contact-note-error");
+    contactNote.textContent = CONTACT_NOTE_DEFAULT;
+    const sendBtn = contactForm.querySelector(".contact-send");
+    sendBtn.disabled = false;
+    sendBtn.textContent = "Send message";
+  };
 
   const openContact = () => {
     contactModal.classList.add("open");
     contactModal.setAttribute("aria-hidden", "false");
     lenis.stop();
-    setTimeout(() => contactForm.elements.name.focus(), 300);
+    if (contactSuccess.hidden) {
+      setTimeout(() => contactForm.elements.name.focus(), 300);
+    }
   };
   const closeContact = () => {
     contactModal.classList.remove("open");
     contactModal.setAttribute("aria-hidden", "true");
     lenis.start();
+    if (!contactSuccess.hidden) {
+      setTimeout(resetContactView, 400);
+    }
   };
 
   document.querySelectorAll("[data-contact-open]").forEach((btn) =>
@@ -86,15 +103,9 @@
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error(data.error || "");
 
-      contactNote.textContent = "MESSAGE SENT · I’LL REPLY WITHIN ONE BUSINESS DAY";
-      setTimeout(() => {
-        closeContact();
-        contactForm.reset();
-        contactNote.classList.remove("contact-note-error");
-        contactNote.textContent = CONTACT_NOTE_DEFAULT;
-        sendBtn.disabled = false;
-        sendBtn.textContent = "Send message";
-      }, 1800);
+      contactForm.hidden = true;
+      contactSuccess.hidden = false;
+      contactSuccess.querySelector(".contact-success-close").focus();
     } catch (err) {
       contactNote.classList.add("contact-note-error");
       contactNote.textContent = err.message || "SOMETHING WENT WRONG · EMAIL JACOB@JACOB1K.COM DIRECTLY";

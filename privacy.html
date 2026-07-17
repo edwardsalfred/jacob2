@@ -118,11 +118,20 @@
         <button type="submit" class="btn btn-solid contact-send">Send message</button>
         <p class="contact-note mono" id="contact-note">SENT DIRECTLY TO JACOB · REPLY WITHIN ONE BUSINESS DAY</p>
       </form>
+      <div class="contact-success" id="contact-success" hidden>
+        <div class="contact-success-mark" aria-hidden="true">✓</div>
+        <p class="kicker mono">MESSAGE SENT</p>
+        <h3 class="contact-title">THANKS, <span class="em">TALK SOON</span></h3>
+        <p class="contact-copy">Your message landed in Jacob's inbox. Expect a reply within one business day at the email you provided.</p>
+        <button type="button" class="btn btn-solid contact-success-close" data-contact-close>Close</button>
+      </div>
     </div>
   </div>
 </div>
 
 <script src="assets/vendor/lenis.min.js"></script>
 <script src="js/page.js"></script>
+  <!-- Vercel Web Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
