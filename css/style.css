@@ -528,6 +528,7 @@ img, video { max-width: 100%; display: block; }
 }
 .contact-copy { color: var(--cream-dim); font-size: 0.95rem; margin-bottom: 2rem; max-width: 440px; }
 #contact-form { display: grid; gap: 1.3rem; }
+#contact-form[hidden] { display: none; }
 .field { display: grid; gap: 0.5rem; }
 .field span { color: var(--em); }
 .field input, .field textarea {
