@@ -2,7 +2,7 @@
 // Requires the RESEND_API_KEY environment variable (see RESEND_SETUP.md).
 
 const TO_EMAIL = "Jacob@jacob1k.com";
-const FROM_EMAIL = "Jacob1K Website <booking@jacob1k.com>";
+const FROM_EMAIL = "Jacob1K Website <jacob@jacob1k.com>";
 const MAX_MESSAGE_LENGTH = 5000;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

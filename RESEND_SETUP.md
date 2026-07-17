@@ -84,9 +84,8 @@ static server — that's what actually executes `api/contact.js` locally;
 ## Notes
 
 - The form sends **to** `Jacob@jacob1k.com`, **from**
-  `Jacob1K Website <booking@jacob1k.com>` (`booking@` doesn't need to be a
-  real inbox — it just needs to live on the verified domain), and sets
-  `reply_to` to the visitor's email, so hitting Reply in your inbox goes
-  straight back to them.
+  `Jacob1K Website <jacob@jacob1k.com>`, and sets `reply_to` to the
+  visitor's email, so hitting Reply in your inbox goes straight back to
+  them.
 - There's a hidden honeypot field (`company`) that real visitors never see
   or fill in; submissions that fill it are silently dropped as spam.
