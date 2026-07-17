@@ -1,0 +1,26 @@
+# Jacob1K
+
+> Jacob1K is a professional videographer and creative director based in Hattiesburg, MS, producing music videos, commercials, and event films with clean, cinematic storytelling.
+
+Jacob1K's portfolio site combines a scroll-scrubbed cinematic hero reel with service pillars, selected work, and a collection of articles about modern videography practice in 2026.
+
+## Main pages
+
+- [Home](https://www.jacob1k.com/): Portfolio, service pillars, selected work, and booking contact for Jacob1K.
+- [Articles](https://www.jacob1k.com/articles.html): Index of essays on videography, filmmaking, and the craft of visual storytelling.
+
+## Articles
+
+- [Getting Into Videography in 2026 – What You Really Need](https://www.jacob1k.com/articles/getting-into-videography-in-2026-what-you-really-need.html): Fundamentals for breaking into videography in 2026 — gear, mindset, and the skills that actually matter.
+- [How to Shoot Modern Mockumentary-Style Videos](https://www.jacob1k.com/articles/how-to-shoot-modern-mockumentary-style-videos.html): Treating the camera as a character to capture observational comedy in the resurging mockumentary style.
+- [Overdone Videography Trends You Should Ditch in 2026](https://www.jacob1k.com/articles/overdone-videography-trends-you-should-ditch-in-2026.html): The tired visual clichés that make your work blend in — and what to do instead.
+- [Surviving as a Videographer in 2026's Crowded Market](https://www.jacob1k.com/articles/surviving-as-a-videographer-in-2026-crowded-market.html): Positioning strategy for a saturated market — move toward specialized premium service or volume-driven creation.
+
+## Legal
+
+- [Privacy Policy](https://www.jacob1k.com/privacy.html): How Jacob1K collects, uses, and protects visitor and client information.
+- [Terms of Service](https://www.jacob1k.com/terms.html): Terms governing video production, editing, and related creative services.
+
+## Contact
+
+Book a shoot or reach out via the contact form on the [home page](https://www.jacob1k.com/#book).
